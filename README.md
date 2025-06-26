@@ -37,12 +37,3 @@ This project is built on top of modern AWS cloud services:
 - 📨 **Email Service**: Amazon Simple Email Service (SES)
 
 ---
-
-## 📁 Project Structure
-
-technest-resume-analyzer/
-├── index.html # UI homepage for file upload
-├── style.css # Clean and modern CSS for front-end
-├── script.js # JS logic for form and feedback
-├── lambda_function.py # Core Lambda backend logic
-├── README.md # Project documentation (this file)
