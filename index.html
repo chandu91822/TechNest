@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNest — Instant Resume Analyzer</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <!-- HEADER -->
+      <header>
+        <div class="logo">Tech<span style="color: var(--accent);">Nest</span></div>
+        <div class="subtitle">Instant Resume Analyzer &amp; Job Suggestions</div>
+      </header>
+
+      <!-- MAIN -->
+      <main>
+        <p class="blurb">
+          Upload your resume to receive a detailed skill-based analysis and instantly matched internships or jobs.
+          Powered by AI &amp; AWS, we make your resume job-ready in seconds.
+        </p>
+
+        <form id="uploadForm" autocomplete="off">
+          <h1>Let's get started</h1>
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="e.g., you@example.com" required>
+
+          <label for="resume">Upload Resume</label>
+          <input type="file" id="resume" name="resume" accept=".pdf" required>
+
+          <button type="submit" id="submitButton">Analyze Resume</button>
+
+          <div class="progress" id="progWrap">
+            <div class="progress-bar" id="progBar"></div>
+          </div>
+
+          <div id="message"></div>
+        </form>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        © 2025 TechNest — Empowered by AWS Lambda, S3, SES & Textract
+      </footer>
+    </div>
+  </div>
+
+  <!-- App JS -->
+  <script src="script.js" defer></script>
+</body>
+</html>
