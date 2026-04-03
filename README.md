@@ -10,7 +10,7 @@ The system follows an event-driven, serverless architecture:
 
 User → Web Interface → AWS Lambda → AWS Textract → Skill Analysis → RapidAPI → AWS SNS → Email Output
 
-![Architecture](Architecture.png)
+![Architecture](Architectural_Design.png)
 
 ---
 
