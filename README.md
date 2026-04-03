@@ -1,39 +1,49 @@
-# 📄 Technest — Resume Analyzer
+# 📄 TechNest — Resume Analyzer & Job Recommendation System
 
-**Technest** is an intelligent resume analyzer built using AWS Serverless technologies. It processes uploaded resumes to evaluate and score them, suggest improvements, and recommend matching jobs — all delivered straight to your email!
-
----
-
-## 🧠 Features
-
-- 📑 Upload resumes in PDF/Image formats
-- 🧮 Smart resume scoring with actionable tips
-- 🧠 Extracted skills from resume matched with trending tech stack
-- 🔍 Real-time job and internship suggestions via RapidAPI
-- 📬 Personalized feedback delivered via email
-- ☁️ Fully serverless — scalable and efficient using AWS Lambda
+## 🚀 Overview
+TechNest is a serverless application that analyzes resumes, identifies skill gaps, and recommends relevant jobs and internships. It leverages AWS services and external APIs to automate resume evaluation and provide actionable insights.
 
 ---
 
-## 🚀 Powered By AWS
+## 🏗 Architecture
+The system follows an event-driven, serverless architecture:
 
-This project is built on top of modern AWS cloud services:
+User → Web Interface → AWS Lambda → AWS Textract → Skill Analysis → RapidAPI → AWS SNS → Email Output
 
-| Service        | Role                                                         |
-|----------------|--------------------------------------------------------------|
-| **S3**         | Store uploaded resumes                                       |
-| **Textract**   | Extract text from uploaded PDF/image resumes                 |
-| **Lambda**     | Process resumes and run scoring logic serverlessly           |
-| **API Gateway**| Expose a public HTTPS endpoint to invoke Lambda              |
-| **SES**        | Send personalized email with score and job suggestions       |
+![Architecture](Architectural_Design.png)
 
 ---
 
-## 🛠️ Tech Stack
+## ⚙️ Tech Stack
 
-- 🧑‍💻 **Backend**: Python 3 (AWS Lambda)
-- 🌐 **Frontend**: HTML, CSS, JavaScript
-- 📡 **API Integration**: [RapidAPI – JSearch](https://rapidapi.com/)
-- 📨 **Email Service**: Amazon Simple Email Service (SES)
+### ☁️ Cloud Services
+- AWS Lambda  
+- AWS Textract  
+- AWS SNS  
+
+### 🔧 Backend
+- Python (Boto3)
+
+### 🌐 API Integration
+- RapidAPI (Job & Internship Data)
+
+### 🎨 Frontend
+- HTML
 
 ---
+
+## 🔄 Workflow
+
+1. User uploads resume (PDF) through web interface  
+2. AWS Lambda function is triggered  
+3. AWS Textract extracts text from resume  
+4. Custom logic analyzes skills and calculates score  
+5. Missing skills are identified using keyword matching  
+6. RapidAPI fetches relevant job/internship listings  
+7. AWS SNS sends results via email  
+8. User receives skill score and job recommendations  
+
+
+
+```md
+![Email Output](assets/email.png)
