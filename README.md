@@ -10,7 +10,7 @@ The system follows an event-driven, serverless architecture:
 
 User → Web Interface → AWS Lambda → AWS Textract → Skill Analysis → RapidAPI → AWS SNS → Email Output
 
-![Architecture](Architectural_Design.png)
+![Architecture](Architectural_Deign.png)
 
 ---
 
@@ -45,5 +45,3 @@ User → Web Interface → AWS Lambda → AWS Textract → Skill Analysis → Ra
 
 
 
-```md
-![Email Output](assets/email.png)
